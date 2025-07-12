@@ -9,7 +9,6 @@ import org.hibernate.annotations.CreationTimestamp;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
-import net.bytebuddy.dynamic.TypeResolutionStrategy.Lazy;
 
 @Entity
 @Table(name="orders")
