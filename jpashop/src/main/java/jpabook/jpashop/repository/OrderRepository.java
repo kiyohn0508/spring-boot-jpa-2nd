@@ -22,5 +22,11 @@ public class OrderRepository {
     }
 
     // 주문 검색 기능
-    // public List<Order> findAll(OrderSearch OrderSearch);
+    public List<Order> findAll(OrderSearch OrderSearch){
+        return em.createQuery("select o from Order o join o.member m"
+        + " where o.status =:status" + " and m.name like :name", Order.class)
+        .setParameter("status", OrderSearch.getOrderStatus())
+        .setParameter("name", OrderSearch.getMemberName())
+        .setMaxResults(100).getResultList();
+    }
 }
