@@ -26,7 +26,7 @@ public class ItemController {
         return "items/createItemForm";
     }
     
-    @PostMapping
+    @PostMapping("items/new")
     public String create(BookForm form){
         Book book = new Book();
         book.setName(form.getName());
@@ -39,7 +39,7 @@ public class ItemController {
         return "redirect:/";
     }
 
-    @GetMapping
+    @GetMapping("/items")
     public String list(Model model){
         List<Item> items = itemService.findItems();
         model.addAttribute("items", items);

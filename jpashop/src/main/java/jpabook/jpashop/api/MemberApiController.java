@@ -2,6 +2,7 @@ package jpabook.jpashop.api;
 
 import org.springframework.web.bind.annotation.PutMapping;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -63,6 +64,12 @@ public class MemberApiController {
         List<MemberDto> collect = findMembers.stream()
             .map(m-> new MemberDto(m.getName()))
             .collect(Collectors.toList());
+
+        // List<MemberDto> lists = new ArrayList<>();
+
+        // for (Member member : findMembers){
+        //     lists.add(new MemberDto(member.getName()));
+        // }
 
         return new Result(collect.size(), collect);
     }
