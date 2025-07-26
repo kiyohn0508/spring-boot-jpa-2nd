@@ -2,7 +2,6 @@ package jpabook.jpashop.api;
 
 import org.springframework.web.bind.annotation.PutMapping;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 

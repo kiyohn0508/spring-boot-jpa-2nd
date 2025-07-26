@@ -11,11 +11,16 @@ import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Root;
 import jpabook.jpashop.domain.Order;
 import jpabook.jpashop.domain.OrderSearch;
+import jpabook.jpashop.domain.OrderStatus;
+import jpabook.jpashop.repository.order.simplequery.OrderSimpleQueryDto;
+import lombok.Data;
 import lombok.RequiredArgsConstructor;
 import jakarta.persistence.criteria.Join;
 import jakarta.persistence.criteria.Predicate;
-
+import jpabook.jpashop.domain.Address;
 import jpabook.jpashop.domain.Member;
+
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
